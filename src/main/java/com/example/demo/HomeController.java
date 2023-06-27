@@ -20,13 +20,14 @@ public class HomeController {
         userInfoRepository.save(userInfo);
         System.out.println("한글 확인");
     }
-
     @RequestMapping("/")
     public String home(Model model){
         UserInfo userInfo=userInfoRepository.findById("id1").get();
         model.addAttribute("userInfo",userInfo);
         System.out.println(userInfo.getId());
-        return "home";
+
+
+        return "/index";
     }
 
 }
