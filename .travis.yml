@@ -29,7 +29,7 @@ notifications:
 before_deploy:
   - zip -r changhee *   # AWS에서의 무언가가 아닌 내 프로젝트이름
   - mkdir -p deploy
-  - mv freelec.zip deploy/changhee.zip   # 파일이름도 프로젝트이름 .
+  - mv changhee.zip deploy/changhee.zip   # 파일이름도 프로젝트이름 .
 
 deploy:
   - provider: s3
